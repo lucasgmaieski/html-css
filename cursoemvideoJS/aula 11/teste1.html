@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="carregar()">
+    <div id="saudar">
+        
+    </div>
+    <script>
+        function carregar(){
+        //window.document.write('opaaaa')
+        var agora = new Date()
+        var hora = agora.getHours()
+        var saudar = window.document.getElementById('saudar')
+        //window.document.write(`Na sua localização atual são ${hora} horas`)
+        saudar.innerHTML += '15466'
+        saudar.innerHTML += 'oiiii'
+
+         
+            if(hora < 12){
+               saudar.innerHTML += 'Bom Dia!'
+           } else if( hora <= 18){
+               saudar.innerHTML = 'Boa tarde!'
+           } else{
+               saudar.innerHTML += 'Boa noite!'
+           }
+        }
+    </script>
+    
+</body>
+</html>

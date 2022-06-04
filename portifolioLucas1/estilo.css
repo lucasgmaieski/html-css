@@ -1,0 +1,126 @@
+/*body[data-theme="t-light"] {
+    background-image:url(curitiba2.jpg);
+    background-position: 100% 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;       /*imagem de fundo cobrindo todo o elemento -cover*
+    background-attachment: fixed;
+}
+body[data-theme="t-praia"] {
+    background-image: url(BG_praia.jpg);
+    background-position: 100% 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;       /*imagem de fundo cobrindo todo o elemento -cover*
+    background-attachment: fixed;
+}*/
+/*@media (max-width: 600px) {
+    nav, img {
+      width: 100%;
+      height: auto;}
+    }
+*/
+.censurado {
+    text-align: center;
+    color: black;
+    margin-top: 50%;
+}
+
+section {
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+}
+.quadro {
+    width: 20%;
+}
+.pizzastrogo {
+    width: 100%;
+    margin: 2rem;
+    padding-left: 5px;
+}
+.flutua {
+    float:left;
+    display: flex;
+}
+body {
+    /*background-image:url(curitiba2.jpg); */
+    background-position: 100% 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;       /*imagem de fundo cobrindo todo o elemento -cover*/
+    background-attachment: fixed;
+    font-family: helvetica;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(32, 32, 32);
+    padding: 0;
+    margin: 0;
+}
+nav {
+    /*display: flex;                  /*deixa um item do lado do outro8*/
+    text-align: left;
+    justify-content: space-around;  /*cria um spaçamento entre as coisas*/
+    padding: 20px;
+    margin: 0%;
+    background-color: chocolate ;
+    background-size: contain;
+   
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    
+    list-style: none;
+
+
+    
+}
+ul li {
+    margin-right: 12px;
+
+}
+/*ul li a {
+    color: #fff;
+}*/
+h1 {
+    font-size: 32px;
+}
+img {
+    border: 2px solid rgb(33, 63, 129);
+}
+a {
+    color: rgb(166, 255, 0);
+    cursor: grab;
+}
+footer {
+    padding: 20px;
+    border-top: solid rgb(94, 3, 146);
+    margin-top: 20px;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(12, 80, 21);
+}
+button{
+    background-color: rgb(129, 185, 72);
+}
+
+table th,td, tr{
+    border-spacing: 5px;    /*espaçamento entre as celulas*/
+    border: 1px solid rgb(94, 3, 146);    /*pra tirar as bordas duplas da tabela use  border-collapse: collapse*/
+    
+}
+th, td {
+    padding: 5px;
+}
+tr:hover{
+    background-color: rgb(12, 12, 15);
+}
