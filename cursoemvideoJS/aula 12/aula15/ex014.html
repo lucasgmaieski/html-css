@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body >
+    <header>
+        <h1>Verificador de Idade </h1>
+    </header>
+    <section id="bgcolorido">
+        <div>
+            <p>Ano de nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p> Sexo:
+                <input type="radio" name="radsex" id="masc" checked> <!-- name= radsex igual nos 2 pq me limita a poder marcar só um deles-->
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            <p>Preencha os dados acima para ver o resultado!</p>
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Lucas Maieski</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<!--ao invés de fazer 2 cadeias de ifs e elses (pra homem e mulher), eu separei as imagens em 2 pastas e fiz da seguinte forma:
+
+        if(fgen[0].checked) genero = 'homem';
+        else genero = 'mulher';
+
+        if(idade <= 10) img.setAttribute('src', `images/${genero}/baby.png`)
+        else if(idade <= 21) img.setAttribute('src', `images/${genero}/teen.png`)
+        else if(idade <= 50) img.setAttribute('src', `images/${genero}/adult.png`)
+        else img.setAttribute('src', `images/${genero}/old.png`)
+
+dai dependendo do gênero o algoritmo puxa a foto de uma pasta diferente-->

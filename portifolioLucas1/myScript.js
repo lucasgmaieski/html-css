@@ -48,7 +48,7 @@ function carregar(){
     msg.innerHTML += 'Bom noite'
       img.src = 'bariguinoite.jpg'
       document.body.style.background = '#515154'
-      document.body.style.backgroundImage = "url('bariguinoite.jpg')"
+      document.body.style.backgroundImage = "url('bariguinoite-728.jpg')"
       document.body.style.backgroundSize = 'cover'
       document.body.style.backgroundPosition = '100% 100%'
       document.body.style.backgroundAttachment = 'fixed'
