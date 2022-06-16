@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda pagina </title>
+</head>
+<body>
+    <h1>Tiro, paulada e bomba</h1>
+    <p><a href="index.html" rel="prev">Volta para a primeira página</a></p>
+    <P>Diminua o tamanho do seu navegador para ver a imagem se alterando para se adequar ao tamanho da sua tela. </P>
+    <div>
+        <!-- <video src="midia/tacadaepica.mp4" width="500" controls></video>       forma simples de colocar só um video-->
+        <video controls width="500" > <!-- colocar poster="endereço da imagem de capa para o video"-->
+            <source src="midia/tacadaepica.mp4" type="video/mp4">
+            <source src="midia/Tacadaepica.m4v.m4v" type="video/mp4">
+            <source src="midia/Tacadaepica.webm.webm" type="video/webm">
+            <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+        </video>
+        <picture>
+            <source media="(max-width: 600PX)" srcset="bariguinoitepequena.jpg" type="image/JPG">
+            <source media="(max-width: 1050PX)" srcset="bariguinoitemedia.jpg" type="image/JPG">
+            <img src="bariguinoite.jpg" alt="Barigui à noite">
+        </picture>
+    </div>
+    <h3>Audio</h3>
+    <p>Bora ouvir uma música ai?</p>
+    <audio src="midia/Od Yishama - E's Jammy Jams.mp3" controls ></audio>  <!-- autoplay para reproduzir automaticamente o audio-->
+</body>
+</html>
