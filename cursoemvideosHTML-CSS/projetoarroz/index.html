@@ -1,0 +1,42 @@
+<!--
+
+      sobra
+    - 1400
+       res / 2,45
+       ((res2  +294)-500)+294
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arroz do LUAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <label for="valorsobra">Sobra:</label>
+        <input type="number" name="vsobra" id="vsobra"><br>
+        <input type="button" value="Calcular" onclick="calcular()" class="butt" title="Faz um calculo de quanto arroz tem que colocar no 2º pires a ser despejado na panela para obter 1400 gramas de arroz cozido">
+        <p>O resultado do calculo mirabolante que vc quer é:</p>
+        <p class="res"></p>
+    </div>
+    <footer>
+        <p>&copy; Lucas Maieski</p>
+    </footer>
+    <script>
+        function calcular() {
+            let sobra = document.querySelector('input#vsobra')
+            let res = document.querySelector('p.res')
+            asobra = Number(sobra.value)
+            let resposta = 0
+            resposta = (((1400 - asobra) / 2.45) + 294)-206
+            res.innerHTML = ''
+            res.innerHTML += `<br>\u{1F449}${resposta.toFixed(0)} \u{1F448}`
+            
+        }
+    </script>
+</body>
+</html>

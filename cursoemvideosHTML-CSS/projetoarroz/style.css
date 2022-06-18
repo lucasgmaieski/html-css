@@ -1,0 +1,34 @@
+body {
+    background-color: #56667A;
+    text-align: center;
+}
+div {
+    background-color: #8797AF;
+    margin: auto;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 15px 15px;
+    box-shadow: 1px 1px 2px black;
+}
+p {
+    color: #fff;
+}
+.res {
+    font-size: 40px;
+    margin: auto;
+}
+input#vsobra {
+    margin-top: 20px;
+}
+footer {
+    color: wheat;
+    text-align: center;
+    font-style: italic;
+}
+input.butt {
+    background-color: rgba(223, 190, 2, 0.836);
+}
+input.butt:hover {
+    color:rgb(197, 28, 28)
+}
