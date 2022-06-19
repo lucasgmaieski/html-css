@@ -1,6 +1,7 @@
 body {
     background-color: #56667A;
     text-align: center;
+    color: white;
 }
 div {
     background-color: #8797AF;
@@ -10,26 +11,31 @@ div {
     width: 300px;
     border-radius: 15px 15px;
     box-shadow: 1px 1px 2px black;
+    padding: 10px;
 }
 p {
     color: #fff;
+    padding: 15px;
 }
 .res {
     font-size: 1em;
     margin: auto;
+    text-align: left;
+    color: #fff;
 }
-input#vsobra {
-    margin-top: 20px;
-    margin-bottom: 5px;
+input{
+    margin: 1px;
+    
 }
 footer {
     color: wheat;
     text-align: center;
     font-style: italic;
 }
-input.butt {
-    background-color: rgba(223, 190, 2, 0.836);
-}
+
 input.butt:hover {
     color:rgb(197, 28, 28)
+}
+label.lab {
+    margin: 9px;
 }
