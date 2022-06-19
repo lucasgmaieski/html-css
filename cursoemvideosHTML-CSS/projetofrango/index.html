@@ -1,0 +1,44 @@
+<!--
+
+      sobra
+    - 1400
+       res / 2,45
+       ((res2  +294)-500)+294
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franguinho na panela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Frango cru</h1>
+    </header>
+    <div>
+        <h2>Segunda e terça</h2>
+        <label for="dia">Dia  </label>
+        <input list="dias" name="opdias" id="opdias"><br>
+        <datalist id="dias">
+            <option value="Segunda e Terça"></option>
+            <option value="Quarta e Quinta"></option>
+            <option value="Quinta Sexta e Sábado"></option>
+        </datalist>
+        <label for="pPanela">Sobra:</label>
+        <input type="number" name="pesopan1" id="pesopan1"><br>
+        <input type="button" value="Calcular" onclick="calcularst()" class="butt" title="Calcula as quantidades de carne por refeição">
+        <p>O resultado do calculo mirabolante que vc quer é:</p>
+        <p class="res"></p>
+    </div>
+
+    <footer>
+        <p>2022 &copy; Lucas Maieski. Todos os direitos reservados.​</p>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

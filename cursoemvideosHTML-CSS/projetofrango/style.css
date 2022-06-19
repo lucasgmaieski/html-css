@@ -6,7 +6,7 @@ div {
     background-color: #8797AF;
     margin: auto;
     text-align: center;
-    height: 300px;
+    height: 400px;
     width: 300px;
     border-radius: 15px 15px;
     box-shadow: 1px 1px 2px black;
@@ -15,7 +15,7 @@ p {
     color: #fff;
 }
 .res {
-    font-size: 40px;
+    font-size: 1em;
     margin: auto;
 }
 input#vsobra {
