@@ -32,10 +32,15 @@ footer {
     text-align: center;
     font-style: italic;
 }
-
+input.butt {
+    background-color: rgba(105, 90, 205, 0.398);
+    color: #fff;
+    margin-top: 4px;
+}
 input.butt:hover {
-    color:rgb(197, 28, 28)
+    background-color: slateblue;
+    color: #fff;
 }
 label.lab {
-    margin: 9px;
+    margin: 21px;
 }

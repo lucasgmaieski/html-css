@@ -31,10 +31,11 @@ function calcularst() {
         Qui <sup>1</sup>/<sub>2</sub>dia: ${quimei.toFixed(0)}<br><br>
         Quarta macarrão: 600g de frango cru com o prato<br>`
     } else {
+        frangoliquiqss = opesop -500
         resd.innerHTML = 'Quinta Sexta e Sábado'
         let frangototqss = 180
-        let sexsabman = (frangoliqui * 25) / frangototqss
-        let quinoi = (frangoliqui * 40) / frangototqss
+        let sexsabman = (frangoliquiqss * 25) / frangototqss
+        let quinoi = (frangoliquiqss * 40) / frangototqss
         res.innerHTML = `655g de frango cru com o prato
         <br>Qui noite ${quinoi.toFixed(0)}
         <br>Sex manhã: ${sexsabman.toFixed(0)}<br>
