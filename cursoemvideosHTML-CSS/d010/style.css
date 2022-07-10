@@ -67,7 +67,7 @@ header > p {
     max-width: 600px;    /*isso tornou o paragrafo um bloco por isso o margin auto para centralizar*/
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.292);
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 nav {

@@ -20,7 +20,7 @@ function carregar(){
   var img = window.document.getElementsByClassName('imagem')
   var data = new Date()
   var hora = data.getHours()
-  //var hora = '2'
+  var hora = '20'
   var min = data.getMinutes()
   var seg = data.getSeconds()
   
@@ -52,6 +52,7 @@ function carregar(){
       document.body.style.backgroundSize = 'cover'
       document.body.style.backgroundPosition = '100% 100%'
       document.body.style.backgroundAttachment = 'fixed'
+      document.body.style.backgroundPosition = ' center center'
       //document.body.style.backgroundRepeat = 'no-repeat'
   }
   var name = window.document.getElementById('AA')

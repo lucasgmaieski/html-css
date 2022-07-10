@@ -1,44 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@keyframes animacao{
+    from {background-color: var(--cor02)}
+    to {background-color: #082A3A}
+    to {background-color: #00E6F6}
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --cor01:#00E6F6;
+    --cor02:#1F6CAB;
+    --cor03:#082A3A;
+    --cor04:#FFFFFF;
+    --cor05:#50335C;
+    --cor06:#cbae1f;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    /*background-image: url(img/back\ do\ lucas\ site.png);*/
+    background: linear-gradient(25deg,#082A3A,#1F6CAB,#082A3A, #1F6CAB);
+    background-size: 200%;
+    /*background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: animacao;
+    animation-duration:5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;*/
     color: white;
+    height: 100%vh;
 }
 
 h1 {
     color:  #cbae1f;
     text-shadow: 1px 1px 2px #807215;
-    padding: 10px;
+    text-align: center;
 }
 
 h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 45px;
     color: white;
+    
 }
 main {
-    background-color: black;
+    
     margin: 150px 150px 400px 150px;
     padding: 15px;
     text-align: center;
 }
+
 section.projetos {
     margin-top: 400px;
     box-shadow: 1px 1px 2px 2px white;
     padding: 30px;
 }
 header {
+
     background-color: black;
 
 }
+
+.ajustador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.linkedIn {
+padding-left: 20%;
+}
+.quem-sou{
+    width: 100%;
+    border-style: solid;
+    border-top: #007bf6;
+    margin-bottom: 40px;
+}
+.eu {
+    transition: 2s;
+    margin-right: 50px;
+    
+}
+.eu:hover {
+    transform: scale(1.05);
+}
 nav {
-    background-color: black;
-    margin: 10px ;
-    padding: 10px;
-    box-shadow: 1px 1px 2px 2px rgba(100, 97, 97, 0.982);
+    position: fixed;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 2px rgba(21, 18, 18, 0.982);
     border-radius: 3px;
+    text-align: center;
+}
+.notebook{
+    width: 500px;
+}
+.escondido {
+    backdrop-filter: blur(14px) saturate(78%);
+    -webkit-backdrop-filter: blur(14px) saturate(78%);
+    /*opacity: 0;
+    display:;
+    transition: 1000ms;*/
 }
 a {
-    color: cornflowerblue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: var(--cor01);
+    color: var(--cor03);
+    font-size: 1.3em;
+    border-radius: 10px;
+    border:2px solid #1F6CAB;
     padding: 20px;
 }
+
 footer {
+    /*background-image: linear-gradient(to left, #2F4469, #293C5C, #4C6EA8, #6897E8 );*/
+    border-top: 3.5px solid var(--cor01);
+    padding: 30px;
     text-align: center;
+    margin: auto;
+    margin: 0px -5px;
+    color:  white;
+}
+ol {
+    
+    background-color: cornflowerblue;
+}
+
+button {
+    padding: 1rem 5rem;
+    margin: 1.8rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 1px solid #c908ff;
+    color: #FFF;
+    background: linear-gradient(55deg, #7607C2, #311742, #58068F,#9645CC);
+    animation: buttom 15s ease infinite;
+    background-size: 200%;
+    background-position: right;
+    background-position-x: right;
+    background-position-y: center;
+    cursor: pointer;
+    transition: all 0.8s;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-delay: 0s;
+    text-decoration: none;
+    box-shadow: 0 0 5px #9645CC, 0 0 20px #290342, 0 0 20px #290342;
+}
+button:hover {
+    font-size: 1.6em;
 }
