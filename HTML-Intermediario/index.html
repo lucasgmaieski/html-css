@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Intermediário </title>
+</head>
+
+<body>
+    <h1>HTML Intermediário</h1>
+    <h2>Inputs</h2>
+    <h3>Input Text</h3>
+    <p>&lt;input type="text" name="nome" value="Lucas" id="nome" placeholder="Digite seu nome aqui" &gt;</p>
+    <ul>
+        <li>O atributo type é o tipo desse input</li>
+        <li>O atributo name é o link para onde esse input vai ser armazenado</li>
+        <li>O atributo value é o que vai dizer se esse input tem um valor padrão</li>
+        <li>O atributo id é um identificador para esse input</li>
+        <li>O atributo placeholder é um texto informativo do que deve ser colocado nesse input </li>
+    </ul>
+
+    <input type="text" name="nome" value="Lucas" id="nome" placeholder="Digite seu nome aqui">
+    <input type="text" name="email" placeholder="Digite seu email aqui">
+    <h3>Input number, password, Submit</h3>
+    <h4>Number</h4>
+    <p>&lt;input type="number"&gt;</p>
+    <p>Não deixa digitar texto</p>
+    <label for="numero">Number</label>
+    <input type="number" id="numero">
+
+    <hr>
+    <h5>Label</h5>
+    <p>Atributo for indica a qual é o campo de input que esse label pertence. Deve ser correspondente ao id do input</p>
+    <p>&lt;label for="numero"&gt;Number&lt;/label&gt;</p>
+    <h4>password</h4>
+    <label for="senha">Password</label>
+    <input type="password" id="senha">
+
+    <hr>
+    <h4>Submit</h4>
+    <p>&lt;input type="submit" value="Salvar"&gt;</p>
+    <p>Botão que serve para enviar para o servidor esse dados do formulário. Deve estar dentro da tag form
+    </p>
+    <form action="">
+        <input type="submit" value="Salvar">
+    </form>
+
+    <hr>
+    <h3>Checkbox</h3>
+    <p>&lt;input type="checkbox" name="linguagens" id="c#"&gt;</p>
+    <p>Atributo checked vai deixar marcado aquele input</p>
+    <p>o atributo name de todo o grupo de checkbox deve ser o mesmo </p>
+    <label for="c#">C#</label>
+    <input type="checkbox" name="linguagens" id="c#"><br>
+    <label for="Javascript">Javascript<label>
+        <input type="checkbox" name="linguagens" id="Javascript"><br>
+        <label for="pyton">Pyton</label>
+        <input type="checkbox" name="linguagens" id="pyton">
+
+    <hr>
+    <h3>Radio</h3>
+    <p>&lt;input type="radio" name="genero" id="masculino"&gt;</p>
+    <p>Só seleciona um do grupo. Se quiser deixar algum marcado como padrão é só usar o checked</p>
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="genero" id="masculino">
+
+    <label for="feminino">Feminino</label>
+    <input type="radio" name="genero" id="feminino">
+    <hr>
+    <h3>Select</h3>
+    <p><img src="imagem/exemplo-select.png" alt=""></p>
+    <p>Na hora que o formulário é enviado mesmo que não o usuário não selecione nada será enviado a primeira opção, dai a necessidade de colocar uma primeira opção vazia. Para deixar uma opção específica já marcada é só usar o atributo selected, e se o usuário não escolher outra é essa que será enviada no Submit </p>
+    <p>Para permitir que a escolha de mais de uma opção use o atributo multiple. Segure Ctrl e clique nas opções escolhidas.</p>
+    <label for="filmes">Filmes</label>
+    <select name="filmes" id="filmes">
+        <option value="">Selecione um filme</option>
+        <option value="Senhor dos anéis">Senhor dos anéis</option>
+        <option value="Mad Max">Mad Max</option>
+        <option value="Harry Potter">Harry Potter</option>
+        <option value="Vingadores">Vingadores</option>
+    </select>
+
+    <hr>
+    <h3>Textarea </h3>
+    <p>&lt;textarea name="texto" id="" cols="30" rows="10"&gt;Aqui pode colocar um texto pré definido &lt;/textarea&gt;</p>
+    <p>cols é o número de colunas e rows o número de linhas</p>
+    <textarea name="texto" id="" cols="30" rows="10">Aqui pode colocar um texto pré definido </textarea>
+
+    <hr>
+    <h3>Button</h3>
+    <p>&lt;button>Clicar aqui&lt;/button&gt; <br>
+        &lt;input type="button" value="Clicar aqui"&gt;</p>
+    <p>Pode ser feito usando a tag button ou a tag input com o atributo type="button"</p>
+    <p>Visualmente os dois são iguais mas de preferência para o button pois ele é mais semântico</p>
+    <button onclick="alert('Olá')">CLicar aqui</button>
+    <input type="button" value="Clicar aqui">
+</body>
+
+</html>
