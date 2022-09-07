@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <h2>Formulário com GET</h2>
+    <p>method="GET" envia o dados por parametro na url igual o google. O atributo action é pra onde vai o formulario.</p>
+    <form method="GET" action="index.html">
+        <input type="text" name="q" id="">
+        <input type="submit" value="Enviar">
+
+    </form>
+    <h2>Formulário com POST</h2>
+    <p>Faz o envio "por de baixo dos panos" e deve ser usado para passar informações confidenciais como senhas e
+        informaçõesde login. Envia os dados de uma forma segura.</p>
+    <form method="POST" action="index.html">
+        <input type="text" name="q" id="">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+
+
+    <h3>Formulário de login no Facebook</h3>
+    <div class="formulario">
+        <form method="get" action="index.html">
+            <h1>Cadastre-se</h1>
+            <p>É rápido e fácil.</p>
+            <input type="text" name="nome" placeholder="Nome" id="nome" required>
+            <input type="text" name="sobrenome" placeholder="Sobrenome" id="sobrenome">
+            <input type="text" name="cel-email" placeholder="Celular ou email" id="cel-email"><br>
+            <input type="password" name="senha" placeholder="Nova senha" id="senha"><br>
+
+            <label for="data-nasc"> Data de nascimento <span class="interrogacao"> ? </span></label>
+            <br>
+            <select name="dia" id="data-nasc">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="15">16</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+
+            </select>
+            <select name="mes" id="data-nasc">
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+            <select name="ano" id="data-nasc">
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+            </select>
+            <br>
+            <label for="genero">Gênero <span class="interrogacao"> ? </span></label>
+            <br>
+
+            <div class="genero">
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="genero" id="feminino" value="feminino">
+            </div>
+
+            <div class="genero">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="genero" id="masculino" value="masculino">
+            </div>
+
+            <div class="genero">
+                <label for="personalizado">Personalizado</label>
+                <input type="radio" name="genero" id="personalizado" value="personalizado">
+            </div>
+
+
+            <p>Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>, <a href="#">Política de
+                    Dados</a> e <a href="#">Política de Cookies</a>. Você poderá receber notificações por SMS e cancelar
+                isso quando quiser.</p>
+            <br>
+
+            <button type="submit" class="cadastre-se">Cadastre-se</button>
+        </form>
+    </div>
+    <h2>Mergulhando no código</h2>
+    <ul>
+        <li>No input radio sempre deve ser colocado um value com o valor desse input</li>
+        <li>Se eu quisesse colocar opção para o usuárioenviar uma foto pra colocar no perfil usaria o &lt;input type="file" &gt;. E colocar lá no form o atributo enctype="multipart/form-data"</li>
+        <li>O Atributo required em um input torna obrigatório seu preenchimento </li>
+    </ul>
+    <footer><p>aqui no footer é onde se coloca endereço links de redes sociais telefones termos de privacidade. Use a tag address aqui pra colocar enderços</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+.formulario{
+    margin: auto;
+    border-style: solid;
+    box-shadow: 2px;
+    width: 400px;
+    height: 500px;
+    padding: 15px;
+    color: dimgrey;
+    
+}
+input, select{
+    padding: 6px;
+    margin: 5px;
+    
+}
+.interrogacao{
+    border-radius: 100%;
+    background-color: rgb(59, 57, 57);
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+.cadastre-se{
+    background-color: green;
+    color: white;
+    
+}
+.genero{
+    background-color: white;
+    border: 1px inset rgb(133, 133, 133);
+    
+    
+}
