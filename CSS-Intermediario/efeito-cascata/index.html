@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito cascata</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-cascata{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Efeito cascata e especificidade</h1>
+    <div class="container-cascata" style="background-color: red;">
+        <h2>Container Cascata</h2>
+    </div>
+    <h2>Efeito cascata</h2>
+    <ol>
+        <li>Primeiro ele vai ler o link para o css lá em cima no head(estilo externo)</li>
+        <li>Dentro do css ele vai seguir lendo e se tiver dois comandos iguais vai ser usado o ultimo </li>
+        <li>Depois ele volta e lê o style dentro do head e aplica(estilo interno)</li>
+        <li>E por fim vai aplicar o style que tiver em alguma tag(estilo inline)</li>
+        
+    </ol>
+
+    
+    <div class="container-especificidade">
+        <h2> Container Especificidade</h2>
+        <p id="meu-paragrafo">Quanto mais específico for o seletor maior a príoridade. Não importa a ordem que esteja</p>
+        <ul>
+            <li>O id é o seletor com maior prioridade só perdendo para o um atributo style inline </li>
+            <li>!important pode ser usado para dar prioridade máxima tbm mas deve ser evitado por que dificulta depois na hora de fazer a manutanção no codigo</li>
+            <li><img src="cascata-especificidade-css.png" alt="codigo css do efeito cascata e especificidade"></li>
+            
+        </ul>
+    </div>
+    <h2>Texto</h2>
+    <p>text-align = alinhamento do texto pode ser left right e center e justify</p>
+
+    <p style ="text-align: justify;"> Texto justificado não sobra espaçoes dos lados... Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in blanditiis nobis voluptatem facilis natus eaque, minus deserunt mollitia ad dolore, earum aliquid! Vero at iure, voluptas veritatis iusto nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in blanditiis nobis voluptatem facilis natus eaque, minus deserunt mollitia ad dolore, earum aliquid! Vero at iure, voluptas veritatis iusto nulla!</p>
+    <p>text=tranform pode ser maiusculo minusculo ou todas inicias maiuscilas</p>
+    <p>text-decoration  pode ser underline  line-through  ou none</p>
+    <p style="line-height: 30px;">line-height é a altura da linha <br>
+    blablablabal</p>
+    <p style="text-shadow: 1px 1px 1px blue;">text-shadow coloca sombra no texto</p>
+    <br>
+    <h3>Fontes</h3>
+    <ul class="fonte-milky">
+        <li style="font-family:sans-serif;">Serif = mais usada em jornais e revistas impressos, teas perninhas</li>
+        <li>Sanserif = muito usada na internet pois facilita a leitura</li>
+        <li>monospace = mesma largura das palavras independente de maiuscula ou minuscula</li>
+        <li>Nomes de fontes compostos devem estar entre aspas simples ex: 'Courier New'</li>
+        <li>font-weight  de 100 até 400= normal e regular <br>
+         do 500 ao 700= bold <br>
+        do 700 ao 900= extra bold</li>
+        <li>Na hora de baixar um fonte atente-se para os glifos se tem tudo que você quer </li>
+    </ul>
+    <p>@font-face {
+        font-family: 'Milky';
+        src: url('./fonts/MilkyNice.otf'),
+        url('./fonts/MilkyNice.ttf');
+    }
+    <br>
+    .fonte-milky{
+        font-family: 'Milky', Helvetica, sans-serif;
+        font-weight: 100;
+    }</p>
+
+    <h3>Links</h3>
+    <ul>
+        <li>Cursor</li>
+        <li>Estado, eventos-- a:visited, active, hover</li>
+    </ul>
+
+    <h3>Listas</h3>
+    <p>list-style-type:escolher um tipo padrão</p>
+    <p>list-style-image: url('./imagens/icone.png') <br>
+    ./ Quer dizer que eu to partindo da minha pasta raiz, principal <br>
+    Não é possivel mexer no tamanho dessa icone na lista</p>
+    <img src="./imagens/lista-estilosa.png" alt="codigo css de lista estilizada">
+    <ul class="lista-estilosa">
+        <li>Petr4</li>
+        <li>Vale5</li>
+        <li>Bbas3</li>
+        <li>Bbdc4</li>
+        <li>Itub4</li>
+    </ul>
+    <h3>Background</h3>
+    <p>shorthand -- background: color url size attachment <br><img src="./imagens/backgroundshorthand.png" alt="Codigo css de shorhand de background"></img></p>
+
+    <h3>Display</h3>
+    <ul>
+        <li>Display inline não da pra mudar altura nem largura</li>
+        <li>Display inline-block permite colocar algura e largura</li>
+        <li>Display none esconde os elementos, não some do html. Usado pra esconder elementos muito grandes em dispositivos mobile</li>
+    </ul>
+    <h3>Position </h3>
+    <ul>
+        <li>Static é o padrão que não se mexe</li>
+        <li>Relative deixa o elemento pra ser posisionado em relação ao lugar onde foi criado </li>
+        <li>Absolute cria uma segunda camada(dimensão) para o elemento <br>
+        Para manter esse elemento onde ele foi criado e facilitar a movimentação podemos colocar ele dentro de outro elemento pai com posicionamento relativo. O elemento absolut sempre vai se movimentar em relação ao seu pai relative</li>
+        <li>Fixed também cria uma nova camada por cima mas fica fixo naquele lugar da tela mesmo quando vai pra cima ou pra baixo com scroll </li>
+    </ul>
+</body>
+</html>
