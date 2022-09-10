@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizando elementos</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container-explicacao">
+        <div class="texto-centralizado-1">
+            texto centralizado
+        </div>
+        <div class="explicando">
+            <p>
+                text-align: center; <br>
+                line-height: 250px; é ruim pq tem que setar o mesmo valor da altura do bloco que o texto esta e só aparece uma linha
+            </p>
+        </div>
+    </div>
+
+    <div class="container-explicacao">
+        <div class="container">
+            <p class="texto-centralizado-2">texto centralizado </p>
+        </div>
+        <div class="explicando">
+            <p> Na classe do paragrafo ----- <br>
+                position: absolute; <br>
+                top:50% --> deixa o texto no centro em relação a sua borda superior <br>
+                transform: translateY(-50%)  move o texto 50% pra cima e ai sim deixa totalmente centralizado
+            </p>
+        </div>
+    </div>
+
+    <div class="container-explicacao">
+        <div class="container">
+            <button class="btn alinhado-margin-auto">Um botão</button>
+        </div>
+        <div class="explicando">
+            <p> centralizar usando margin: auto; <br>
+                nesse caso como é um botão que tem display inline tem que mudar pra block para funcionar
+            </p>
+        </div>
+    </div>
+
+    <div class="container-explicacao">
+        <div class="container">
+            <button class="btn alinhado-absolute">Um botão</button>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="explicando">
+            <p> margin: auto; não funciona em position: absolute; -- a não ser que zere todos os lados-- <br>
+                left: 0; <br>
+                top: 0; <br>
+                right: 0; <br>
+                bottom: 0;
+            </p>
+        </div>
+    </div>
+
+    <div class="container-explicacao">
+        <div class="container-text-align">
+            <img src="https://via.placeholder.com/300.png/09f/fff" alt="placeholder">
+        </div>
+        <div class="explicando">
+            <p> 
+                coloca text-align:center em uma classe no pai dos elementos e todos elementos inline, inline-block ou texto vão centralizar
+                <i class="fa-brands fa-instagram"></i>
+            </p>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+    <div class="whats"> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
+    
+    <footer>
+        <i class="fa-brands fa-instagram"></i>
+    <footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

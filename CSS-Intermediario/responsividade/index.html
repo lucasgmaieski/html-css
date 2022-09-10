@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">Logo</h1>
+        <nav>
+            <ul>
+                <li><a href=" #quem-somos">Quem Somos</a>
+                </li>
+                <li><a href="#onde-estamos">Onde Estamos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="painel">
+            <div class="info">
+                <h1>Um filme do batman</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloremque, blanditiis eum reprehenderit optio incidunt quo! Sint fuga pariatur nihil. Doloremque eveniet alias vero enim ducimus rerum aut nulla corporis.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro officiis eligendi accusantium aliquam deserunt labore nemo quia, aut blanditiis deleniti omnis aspernatur neque obcaecati accusamus dolorem, veritatis delectus eaque ut.</p>
+            </div>
+
+            <div class="image">
+                <picture>
+                    <source srcset="./images/batman-pequena.jpg" media="(max-width: 600px)">
+                    <img src="./images/batman.jpg" alt="um filme do batman">
+                </picture>
+            </div>
+        </section>
+        <section class="destrinchando image">
+            <h2>Destrinchando o código</h2>
+            <ol>
+                <li>Para deixar essa parte do texto centralizada e responsiva com os diferentes tamanhos de tela : <img src="./images/main-responsivo.png" alt="codigo main "></li>
+                <li>Responsividade nas imagens se consegue usando a tag picture, sendo que o source vai definir o parametro para usar a imagem alternativa <img src="./images/picture-responsiva.png" alt="codigo do picture "></li>
+            </ol> <br>
+            <h3>Media queries</h3>
+            <p>@media (max-width: 576px){ as regras aqui colocadas serão seguidas sempre que a tela for menor que 576px } <br>
+                max-width é o ponto de quebra <br>
+            a media seguem o efeito cascata</p>
+            <img src="./images/media-queries-diferentes-dispositivos.png" alt="Media queries para diferentes tamanhos de dispositivos ">
+        </section>
+    </main>
+</body>
+</html>
