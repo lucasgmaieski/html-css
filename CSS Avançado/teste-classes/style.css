@@ -1,0 +1,23 @@
+section  p {
+    color: red;
+}
+
+
+
+.section2 > p{
+    background-color: aqua;
+}
+section + p {
+    background-color: black;
+    color: white;
+}
+
+div  p {
+    background-color: chartreuse;
+}
+
+
+a[target=_blank] {
+    background-color: black;
+    color: white;
+}

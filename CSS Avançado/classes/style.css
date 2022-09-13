@@ -1,0 +1,63 @@
+/* seletor:pseudo-classe {
+    propriedade: valor
+} */
+
+/* primeiro filho */
+p:first-child {
+    color: aquamarine;
+}
+/* ultimo filho */
+p:last-child {
+    color: blueviolet;
+}
+/* todos os p que não tem a classe .padrao recebem a cor amarela */
+p:not(.padrao){
+    color: yellow;
+}
+
+/* aplica a regra só ao impares(odd) */
+p:nth-child(odd){
+    color: red;
+}
+
+li:nth-child(2n) {
+    color: chartreuse;
+}
+
+
+/* seletor:: pseudo-elemento{propriedade:valor } */
+/* consegue estilizar a primeira letra  */
+.first-letter::first-letter{
+    color: blue;
+    font-size: 2rem;
+}
+.first-line::first-line{
+    color: blue;
+}
+
+/* before -->  coloca uma propriedade Antes de um elemento     h2::before {propriedade:valor}*/
+
+/* content --> define um conteudo a ser inserido na pagina */
+ol li::before{
+    content: url(./images/logo.jpg) "teste";
+}
+
+ol li:first-child::before{
+    content: "";
+    background: url(./images/pizza.jpg) center center no-repeat;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+
+}
+
+/* After --> Depois */
+
+ol li::after{
+    content: url(./images/logo.jpg) " Afterzinho";
+}
+
+.seletor{
+    background-color: black;
+    color: white;
+}
