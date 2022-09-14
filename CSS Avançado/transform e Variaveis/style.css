@@ -1,0 +1,39 @@
+img {
+    width: 200px;
+
+}
+
+img.scale {
+    transform: scale(3, 1);
+}
+
+img.rotate{
+    transform: rotate(20deg);
+}
+img.translate {
+    transform: translate(100px, 10px);
+}
+
+
+
+/* variaveis */
+:root{
+    --cor-padrao: red;
+    --tamanho-de-fonte-padrao: 20px;
+}
+h2 {
+    color: var(--cor-padrao, red);
+    font-size: var(--tamanho-de-fonte-padrao, 20px);
+}
+h3 {
+    color: var(--cor-padrao, red);
+    font-size: var(--tamanho-de-fonte-padrao, 20px);
+}
+p {
+    color: var(--cor-padrao, red);
+    font-size: var(--tamanho-de-fonte-padrao, 20px);
+}
+span {
+    color: var(--cor-padrao, red);
+    font-size: var(--tamanho-de-fonte-padrao, 20px);
+}

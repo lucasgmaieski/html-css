@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Transform</h1>
+    <h2>Scale</h2>
+    <img src="3.jpg" alt="" class="scale">
+    <p>transform: scale(x, y);</p>
+
+    <h2>Rotate</h2>
+    <img src="3.jpg" alt="" class="rotate">
+    <p>transform: rotate(20deg);</p>
+
+    <br>
+    <h2>Translate</h2>
+    <img src="3.jpg" alt="" class="translate">
+    <p>transform: translate(100px, 10px);</p>
+
+    <h1>Variáveis</h1>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <p>Texto do parágrafo </p>
+    <span>Texto do span</span>
+
+    <ul>
+        <li>Definindo as variaveis <br>  :root{ <br>
+            --cor-padrao:red; <br>
+            --tamanho-de-fonte-padrao: 20px; <br>
+        } </li>
+        <li>Usando as variáveis <br>
+            h2 {
+                color: var(--cor-padrao, red); <br>
+                font-size: var(--tamanho-de-fonte-padrao, 20px); <br>
+            }</li>
+    </ul>
+</body>
+</html>

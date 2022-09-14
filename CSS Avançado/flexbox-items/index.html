@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Flex Items - Grow - Basis - Shrink</h1>
+
+    <section>
+        <h2>Grow</h2>
+        <p>Define a capacidade de um flex item crescer se for necessario dentro do container. Usa valores inteiros </p>
+        <h3>Flex Grow</h3>
+        <div class="container">
+            <div class="item grow-1">1</div>
+            <div class="item grow-2">2</div>
+            <div class="item grow-2">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Basis</h2>
+        <p>Define um valor minimo para o item ocupar dentro do container </p>
+        <h3>Flex basis</h3>
+        <div class="container">
+            <div class="item grow-1 basis-100">Lorem 123</div>
+            <div class="item grow-1 basis-0">Lorem 123 456</div>
+            <div class="item grow-1 basis-300">Lorem dasdddadad</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Shrink</h2>
+        <p>Define a capacidade de um flex item de comprimir.Quanto maior o valor mais aquele item vai poder ser
+            comprimido se necessario. flex-shrink:0; vai travar o item para que ele não encolha </p>
+        <h3>Flex Shrink</h3>
+        <div class="container shrink">
+            <div class="item grow-1 shrink-1">1adfsg</div>
+            <div class="item grow-1 shrink-0">2asdfgafgasfgafgafgaafgafgafgadfgafdgfgafgafgafgafg</div>
+            <div class="item grow-1 shrink-0">3sasadfasg</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Flex</h2>
+        <p>Abreviação para o grow shrink e basis </p>
+        <h3>Flex </h3>
+        <div class="container flex-exemplo">
+            <div class="item flex-1">1ad fsgdgh dghadgh</div>
+            <div class="item flex-1">2asdfgafg asfga afgafga fgafg</div>
+            <div class="item flex-1">3sa sadfasg</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Order</h2>
+        <p>Quanto maior o order do item mais pra direita ele vai ficar. O default é 0</p>
+        <h3>Order </h3>
+        <div class="container order">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.flex {
+    display: flex;
+    width: 960px;
+    max-width: 100%;
+}
+
+.flex img{
+    max-width: 100%;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    flex: 1 ;
+}
+
