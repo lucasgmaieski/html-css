@@ -10,71 +10,42 @@ h1 {
     font-size: 30px;
     font-weight: 700;
 }
-p {
+h3 {
     font-size: 17px;
     font-weight: 300;
 }
+main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
 .container {
     display: flex;
-    justify-content: space-around;
-    margin: 130px 20px;
-    color: white;
+    justify-content: center;
     flex-wrap: wrap;
-    
-}
-.container > div{
-    border: 1px solid black;
-    padding: 10px;
+    gap: 20px;
 }
 
-.image-1 {
-    background: url(image/rome.png) center center no-repeat;
+.container img {
+    width: 100%;
+}
+
+.image-1, .image-2, .image-3, .image-4{
     width: 335px;
     height: 431px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    position: relative;
 }
 .texto {
-    padding-bottom:42px ;
-    padding-left: 26px;
-}
-
-
-.image-2 {
-    background: url(image/boat.png) center center no-repeat;
-    width: 335px;
-    height: 431px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    position: absolute;
+    color: white;
+    bottom: 40px;
+    left: 20px;
 }
 
 
 
-
-.image-3 {
-    background: url(image/sand-and-sea.png) center center no-repeat;
-    width: 335px;
-    height: 431px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-
-
-.image-4 {
-    background: url(image/starry-night.png) center center no-repeat;
-    width: 335px;
-    height: 431px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-
-@media(max-width:770px){
+/* @media(max-width:770px){
     .container {
         margin-top: 45px;
     }
@@ -85,4 +56,4 @@ p {
         padding-bottom: 22px;
         padding-left: 20px;
     }
-}
+} */
