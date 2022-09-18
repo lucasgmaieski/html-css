@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grid Template Area</h1>
+
+    <div class="container">
+        <header class="cabecalho">Header</header>
+        <nav class="menu">Navigation</nav>
+        <section class="secao-principal">
+            <h1>Seção principal</h1>
+            <ol>
+                <li>Nomear cada seção com um nome que quiser usando grid-area: nome</li>
+                <li>No container usar grid-template-areas com o esses nome: <br>
+                    grid-template-areas: <br>
+                    "cabecalho cabecalho cabecalho" <br>
+                    "menu secao-principal aside " <br>
+                    "rodape rodape rodape";</li>
+                    <li>Coloque um ponto no lugar do nome para deixar aquele espaço vazio</li>
+                    <li>Modo abreviado</li>
+            </ol>
+        </section>
+        <aside class="aside">Aside <img src="Grid-abreviado.png" alt="Código de grid abreviado"></aside>
+        <footer class="rodape">Rodapé</footer>
+    </div>
+</body>
+</html>

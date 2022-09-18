@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grid</h1>
+
+    <div class="container">
+        <div>célula 1</div>
+        <div>célula 2</div>
+        <div>célula 3</div>
+        <div>célula 4ddddd</div>
+        <div>célula 5</div>
+        <div>célula 6</div>
+        <div>célula 7</div>
+    </div>
+    <section>
+        <ol>
+            <li>Defina o container com display grid <br>No Display grid os elementos ocupam todo o espaço do container <br>
+            No Display inline-grid eles ocupam o espaço do maior elemento </li>
+            <li>grid-template-colums para definir como vai ser a colunas <br>
+            ex: grid-template-columns: 100px auto;  --> Cria uma coluna com 100px e outra preenchando todo o resto de espaço do container</li>
+            <li>grid-template-rows: 150px 50px; para definir o tamanho das linhas, nesse exemplo 150 na primeira, 50 na segunda e as outras o tamanho padrão <br>
+            Para repetir o mesmo tamanho para outras linhas sem ter que ficar digitando a mesma coisa: <br>
+            grid-template-rows: repeat(2, 100px)  --> sendo o primeiro parâmetro quantas linhas vão ter aquele tamanho</li>
+            <li>Abreviando essas duas propriedades: <br>
+            grid-template: repeat(2, 150px ) / 100px auto; <br></li>
+            <li>grid-gap: 10px;  --> para separar as linhas e colunas <br>
+                grid-column-gap: 10px;   --> separa só as colunas <br>
+                grid-row-gap:30px;   -->para separar só as linhas <br>
+                Se passar 2 valores no grid-gap o primeiro é para linhas e o segundo para colunas
+            </li>
+            
+        </ol>
+    </section>
+</body>
+</html>

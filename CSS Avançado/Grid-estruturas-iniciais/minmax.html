@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinMax</title>
+    <link rel="stylesheet" href="minmax.css">
+</head>
+<body>
+    <h1>MinMax</h1>
+
+    <h1>Display grid</h1>
+
+    <div class="container">
+        <div>
+            Ajusta o conteudo no mínimo em 100px <br> Vestibulum purus quam, scelerisque ut, mollis sed
+        </div>
+        <div>
+            Ajussta o conteudo no máximo 200px <br> Nulla neque dolor, sagittis ager, icculis quis.
+        </div>
+        <div>Ajusta o conteudo no mínimo 200px</div>
+        <div>máximo 1fr</div>
+        <div>célula 5</div>
+        <div>célula 6</div>
+        <div>célula 7</div>
+        <div>célula 8</div>
+    </div>
+    <p>/* 3 colunas
+        1- a primeira com minimo de 100px e maximo de 800px <br>
+        2- a segunda e a terceira (repeat) com minimo de 100 px e maximo de 300px <br>
+        3- quarta coluna com auto no min e no max */ <br>
+        grid-template-columns: minmax(100px,800px) repeat(2,minmax(100px,300px)) minmax(auto, auto);</p>
+</body>
+</html>
