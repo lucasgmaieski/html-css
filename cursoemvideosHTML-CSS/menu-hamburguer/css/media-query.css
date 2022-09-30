@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width:768px) {
+    span#burguer {
+        display: none;
+    }
+    header {
+        padding: 10px 20px;
+    }
+     menu#itens {
+        /* display: block; */
+        position: static;
+        width: auto;
+        border-radius:0 ;
+     }
+     menu > ul > li {
+        display: inline-block;
+     }
+     main {
+        width: 768px;
+        padding-top: 40px;
+     }
+}
