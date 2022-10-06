@@ -44,15 +44,23 @@ span#burguer:hover {
 menu {
     display: none;
 }
-menu#itens {
+#itens {
     position: absolute;
     width: 50vw;
     right: 0;
-    
     border-radius: 0 0 0 100px;
-    transition:  0.8s ease-in-out;
     overflow: auto;
+
+    /* 
+    https://velhobit.com.br/tutoriais/css-como-usar-transition-com-displayblock.html -------
+    overflow:hidden;
+  max-height: 200px;
+  transition: max-height 1s ease-in-out; */
 }
+/* #itens.hide {
+    max-height: 0;
+  pointer-events: none;
+} */
 
 /* menu#itens {
     position: fixed;
@@ -80,7 +88,7 @@ menu>ul>li>a {
     background-color: rgb(87, 87, 87);
     color: white;
     border-top: 2px solid gray;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 menu>ul>li>a:hover {
