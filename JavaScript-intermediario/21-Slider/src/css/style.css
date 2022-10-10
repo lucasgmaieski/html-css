@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    background: #f2f2f2;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    align-items: center;
+    
+}
+.container1 {
+    background: url(../images/flores-rosas.jpg) no-repeat;
+    background-size: cover;
+}
+.container1 .content a {
+    color: red;
+}
+.container2 {
+    background: url(../images/flores-verdes.jpg) no-repeat;
+    background-size: cover;
+}
+.container2 .content a {
+    color: chartreuse;
+}
+.container3 {
+    background: url(../images/lago.jpg) no-repeat;
+    background-size: cover;
+}
+.container3 .content a {
+    color: cornflowerblue;
+}
+.container4 {
+    background: url(../images/montanhas.jpg) no-repeat;
+    background-size: cover;
+}
+.container4 .content a {
+    color: yellow;
+}
+.container .content {
+    width: 20rem;
+    height: fit-content;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    /* margin-left: 2rem; */
+}
+
+.container .content p {
+    padding: 2.5rem 0 2rem 0;
+}
+
+.container .arrow {
+    width: fit-content;
+    margin: 3rem;
+}
+.container .arrow img{
+    width: 3rem;
+}
+.container .arrow-left img {
+    transform: rotateY(180deg);
+}
+.container .arrow-right {
+    justify-self: flex-end;
+    
+}
