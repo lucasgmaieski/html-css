@@ -1,0 +1,14 @@
+Como uma API funciona?
+API = Application Programming Interface
+é uma forma de fazer a comunicação de um software e outro software
+essa comunicação não precisa ser visual, mas seguem um padrão - JSON
+
+JSON = Javascript Object Notation
+
+https://jsonplaceholder.typicode.com/posts 
+
+
+
+CALLBACK?
+call back =  ligar de volta
+
