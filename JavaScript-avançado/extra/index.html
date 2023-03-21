@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extras</title>
+</head>
+<body>
+    <h1>Optional Chaining</h1>
+    <p></p>
+    <script>
+
+        const user = {
+            name: 'Lucas',
+            age: 26,
+            address: {
+                street: 'Rua iguaçu',
+                number: 200,
+                zip: {
+                    code: '856400000',
+                    city: 'Ampére',
+                },
+                showFullAdress() {
+                    return 'ok';
+                }
+            },
+        }
+        // o ponto de interrogação verifica se a propriedade que vem antes existe ou não.
+        //Se não existe ele nem verifica para frente e retorna "undefined"
+        document.body.innerText = user.address?.zip?.code ?? 'Não informado';
+        //    '??' se o que vem antes não existir então mostre isso que vem depois da '??'
+
+        // verifica se address existe depois verifica se a função existe.
+        document.body.innerText = user.address?.showFullAdress?.();
+
+    </script>
+</body>
+</html>

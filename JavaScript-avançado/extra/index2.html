@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extras</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p></p>
+    <script>
+
+        const array = [1, 2, 3, 4, 5];
+
+        // array.forEach(item => {
+        //     document.body.innerText += item;
+        // })
+
+        // no map uu consigo ter um retorno para algum elemento fora do map
+        const novoArray = array.map(item => {
+            if(item % 2 == 0) {
+                itempar = ['Par', item]
+                return itempar;
+            }
+            return item;
+
+        })
+        document.body.innerText = JSON.stringify(novoArray);
+
+
+        //Filter só filtra, corta um pedaço do array. Não pode modificar os items do array
+        const novoArray2 = array.filter(item => item % 2 == 0)
+        document.body.innerText = JSON.stringify(novoArray2);
+
+        //every - > retorna true se TODOS os items satisfazem a condição
+        const array2 = [1, 2, 3, 4, 5, 'oi'];
+        const todosItensSãoNumeros = array2.every(item => typeof item === 'number');
+        document.body.innerText = JSON.stringify(todosItensSãoNumeros);
+        // some -> retorna true se pelo menos um item satisfaz a situação
+
+        //find -> encontrar o primeiro item que satisfaz a condição e retorna seu valor
+        const par = array.find(item => item % 2 == 0);
+        document.body.innerText = JSON.stringify(par);
+        //findindex -> retorna seu indice
+
+
+        //reduce -> quando quero criar algo novo
+        const soma = array.reduce((acc, item) => {
+            document.body.innerText += acc + ',' + item + '---'
+            return acc + item
+        }, 10)
+        document.body.innerText = JSON.stringify(soma);
+    </script>
+</body>
+</html>
