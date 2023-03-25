@@ -1,5 +1,9 @@
 import React from 'react';
 import { Header } from './components/Header';
+import { Photo } from './components/Photo';
+import { Contador } from './components/Contador';
+import { Nameinput } from './components/Nameinput';
+import { useState } from 'react';
 
 // const App = () => {
 //   // return React.createElement('div', null, 'Hello Word!');
@@ -13,12 +17,30 @@ import { Header } from './components/Header';
 
 // expressões no jsx
 const App = () => {
+  const [numero, setNumero] = useState(0);
+  const [name, setName] = useState('Lucas');
+
+  const hadleButtonClick = () => {
+    alert("O número foi somado a 10!");
+    setNumero(numero + 10);
+    setName(`Lucas é nota ${numero}`);
+  }
 
   return (
     <div>
       <Header title="Este é um título de exemplo passado por props"/>
       <Header title="Este é um título secundario de exemplo passado por props"/>
       Hello Word!
+
+      <Photo url="http://www.google.com.br/google.jpg" legend="Google"/>
+
+      <button onClick={hadleButtonClick}>Clique aqui!</button>
+
+      O número é: {numero} <br />
+      O nome é: {name}
+      <br /><br />
+      <Contador /> <br />
+      <Nameinput />
     </div>
   );
 }
