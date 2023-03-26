@@ -3,7 +3,11 @@ import { Header } from './components/Header';
 import { Photo } from './components/Photo';
 import { Contador } from './components/Contador';
 import { Nameinput } from './components/Nameinput';
+import { Botao} from './components/Botao';
+import { List } from './components/List';
+import { Mostrar } from './components/Mostrar';
 import { useState } from 'react';
+
 
 // const App = () => {
 //   // return React.createElement('div', null, 'Hello Word!');
@@ -19,6 +23,11 @@ import { useState } from 'react';
 const App = () => {
   const [numero, setNumero] = useState(0);
   const [name, setName] = useState('Lucas');
+  let textoDoBotao = 'Clicar no botão';
+
+  const botaoEventAction = (text: string) => {
+    alert("Frase do App: " + text);
+  }
 
   const hadleButtonClick = () => {
     alert("O número foi somado a 10!");
@@ -37,10 +46,17 @@ const App = () => {
       <button onClick={hadleButtonClick}>Clique aqui!</button>
 
       O número é: {numero} <br />
-      O nome é: {name}
-      <br /><br />
+      O nome é: {name} <br /><br />
+      
       <Contador /> <br />
-      <Nameinput />
+      <Nameinput /> <br /><br />
+      
+      <Botao text={textoDoBotao} clickFn={botaoEventAction}/> <br />
+      
+      <h2>Lista de presença</h2>
+      <List /> <br />
+
+      <Mostrar />
     </div>
   );
 }
