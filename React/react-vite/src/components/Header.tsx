@@ -7,9 +7,9 @@ type Props = {
 // forma alternativa de passar a props  ({ title }: Props)   ai pode usar só title no componente ao invés de props.title
 export const Header = (props: Props) => {
     return (
-        <header>
+        <div>
             <h1>{props.title}</h1>
             <hr />
-        </header>
+        </div>
     );
 }

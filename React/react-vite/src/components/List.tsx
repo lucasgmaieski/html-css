@@ -1,3 +1,5 @@
+import '../styles.css';
+
 export const List = () => {
     let list = [
         {name:'Bonieky', age: 90},
@@ -9,7 +11,7 @@ export const List = () => {
     return (
         <ul>
             {list.map((item, index) =>(
-                <li key={index}>{item.name} - {item.age} anos</li>
+                <li className="item-list" key={index}>{item.name} - {item.age} anos</li>
             ))}
         </ul>
     );

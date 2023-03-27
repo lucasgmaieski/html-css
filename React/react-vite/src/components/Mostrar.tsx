@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const Mostrar = () => {
     const[show, setShow] = useState(false);
+
     const handleClick = () => {
         setShow(!show);
     }
