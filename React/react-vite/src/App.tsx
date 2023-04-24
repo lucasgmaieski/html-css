@@ -8,6 +8,8 @@ import { List } from './components/List';
 import { Mostrar } from './components/Mostrar';
 import { useState } from 'react';
 import * as C from './AppStyles';
+import { ReducerContador } from './components/ReducerContador';
+import { PeopleList } from './components/PeopleList';
 
 
 // const App = () => {
@@ -60,6 +62,10 @@ const App = () => {
             <List /> <br />
 
             <Mostrar />
+            <ReducerContador />
+            <hr />
+
+            <PeopleList />
         </C.Main>
     );
 }
