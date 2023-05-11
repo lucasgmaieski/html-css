@@ -5,7 +5,9 @@ export const RouteList = () => {
 
     return useRoutes([
         { path: "/" , element: <Album /> },
-        { path: "/albums" , element: <Album /> }
+        { path: "/albums" , element: <Album /> },
+        { path: "/album/:slug" , element: <Photos /> },
+        { path: "/photo/:slug" , element: <Photo /> },
     ]);
     // return (
     //     <Routes>
