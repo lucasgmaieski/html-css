@@ -1,18 +1,23 @@
 import axios from 'axios';
 
-const BASE = 'https://jsonplaceholder.typicode.com';
-
+const request = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com'
+})
 export const api = {
-    getAllAlbums: async () => {
-        let response = await axios.get(`${BASE}/albums`);
+    getAlbums: async () => {
+        const response = await request(`/albums`);
         return response.data;
     },
-    getAlbum: async (albumId: number) => {
-        let response = await axios.get(`${BASE}/albuns/${albumId}`);
+    getAlbum: async (id: number) => {
+        const response = await request(`/albums/${id}`);
         return response.data;
     },
-    getPhoto: async (photoId: number) => {
-        let response = await axios.get(`${BASE}/photos/${photoId}`);
+    getPhotosFromAlbum: async (id: number) => {
+        const response = await request(`/albums/${id}/photos`);
+        return response.data;
+    },
+    getPhoto: async (id: number) => {
+        const response = await request(`/photos/${id}`);
         return response.data;
     }
 }

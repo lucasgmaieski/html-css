@@ -1,5 +1,7 @@
 import { Routes, Route, useRoutes } from 'react-router-dom';
 import { Album } from './pages/Album';
+import { Photos } from './pages/Photos';
+import { Photo } from './pages/Photo';
 
 export const RouteList = () => {
 

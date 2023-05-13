@@ -1,4 +1,4 @@
-import { RouteList } from "./RouteList"
+
 
 
 function App() {
@@ -6,15 +6,8 @@ function App() {
   return (
     <div>
       <h1>Galeria de Fotos</h1>
-
-      Mostrar lista com os albuns de fotos aqui (url= localhost:port/albums/)
-      quando clicar em um album deve ir para a página desse album 
-      na pagina interna de album deve ser um botão para voltar (aqui a url deve ser localhost:port/album/1)
-      e deve exibir o título d album e um grid com as fotos desse album
-      clicando em uma foto vai pra pagina daquela foto e exibe ela em tamanho grande com sua legenda(url= localhost:port/photo/103 )
-      <div>
-      <RouteList />
-      </div>
+      <hr />
+      
       <footer>
         Todos os direitos reservados.
       </footer>
