@@ -1,3 +1,4 @@
+import { MainRoutes } from "./routes/MainRoutes"
 
 
 
@@ -7,7 +8,7 @@ function App() {
     <div>
       <h1>Galeria de Fotos</h1>
       <hr />
-      
+      <MainRoutes />
       <footer>
         Todos os direitos reservados.
       </footer>
