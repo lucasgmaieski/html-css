@@ -7,7 +7,7 @@ type Props = {
 export const PhotoItem = ({ data }: Props) => {
     return (
         <StyledLink to={`/photo/${data.id}`}>
-            <img src="" alt="foto" />
+            <img src={data.thumbnailUrl} alt="foto" />
         </StyledLink>
     );
 }

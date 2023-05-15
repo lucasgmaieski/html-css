@@ -6,7 +6,8 @@ import { AlbumItem } from '../components/AlbumItem';
 export const Home = () => {
     const [loading, setLoading] = useState(false);
     const [list, setList] = useState<Album[]>([])
-
+    const [page, setPage] = useState(1);
+    
     useEffect(() => {
         loadAlbums();
     }, []);
@@ -17,17 +18,21 @@ export const Home = () => {
         setList( albums );
         setLoading(false);
     }
+    const handleLoadMore = () => {
+        setPage(page + 1);
+    }
     return  (
         <div>
             {loading && "Carregando..."}
 
-            {list.map((item, index) => (
-                <AlbumItem 
-                    key={index} 
+            {list.filter(index => (index.id <= page * 9)).map((item, index) => (
+                <AlbumItem
+                    key={index}
                     id={item.id}
                     title={item.title}
                 />
             ))}
+            <button onClick={handleLoadMore}>Carregar Mais</button>
         </div>
     )
 }

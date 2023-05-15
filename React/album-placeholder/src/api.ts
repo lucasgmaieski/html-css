@@ -8,15 +8,15 @@ export const api = {
         const response = await request(`/albums`);
         return response.data;
     },
-    getAlbum: async (id: number) => {
+    getAlbum: async (id: string) => {
         const response = await request(`/albums/${id}`);
         return response.data;
     },
-    getPhotosFromAlbum: async (id: number) => {
+    getPhotosFromAlbum: async (id: string) => {
         const response = await request(`/albums/${id}/photos`);
         return response.data;
     },
-    getPhoto: async (id: number) => {
+    getPhoto: async (id: string) => {
         const response = await request(`/photos/${id}`);
         return response.data;
     }
