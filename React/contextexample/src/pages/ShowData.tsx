@@ -4,12 +4,20 @@ import { Link } from 'react-router-dom';
 import { Context } from "../contexts/Context";
 
 export const ShowData = () => {
-    const  data  = useContext(Context)
+    const  {state, dispatch}  = useContext(Context)
     return (
         <div>
-            Tela ShowData de {data.name}
-            <br />
-            <Link to="/">Voltar para SignUp</Link>
+            {state.user.name && 
+                <>
+                    <h3>Tela ShowData</h3>
+                    MEU NOME É: {state.user.name} <br />
+                    EU TENHO {state.user.age} ANOS.
+                    <br />
+                    <Link to="/">Voltar para SignUp</Link>
+                </>
+            }
+            {!state.user.name && 'Não há informações.'}
+            
         </div>
     );
 }
