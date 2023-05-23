@@ -1,18 +1,20 @@
+import { useContext } from "react";
+import { Context, ContextProvider } from "./contexts/Context";
 import { MainRoutes } from "./routes/MainRoutes"
 
 
 
 function App() {
-
+  const {user, theme} = useContext(Context)
   return (
-    <div>
-      <h1>Galeria de Fotos</h1>
+    <ContextProvider>
+      <h1>Galeria de Fotos do {user} (tema: )</h1>
       <hr />
       <MainRoutes />
       <footer>
         Todos os direitos reservados.
       </footer>
-    </div>
+    </ContextProvider>
   );
 }
 
