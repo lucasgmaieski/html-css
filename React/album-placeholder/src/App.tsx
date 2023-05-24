@@ -8,7 +8,7 @@ function App() {
   const {user, theme} = useContext(Context)
   return (
     <ContextProvider>
-      <h1>Galeria de Fotos do {user} (tema: )</h1>
+      <h1>Galeria de Fotos do {user} (tema: {theme.theme}) </h1>
       <hr />
       <MainRoutes />
       <footer>
