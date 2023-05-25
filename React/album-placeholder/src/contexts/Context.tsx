@@ -1,26 +1,31 @@
-import React, { createContext } from "react";
+import React, { createContext, useReducer } from "react";
+import { themeReducer, ThemeType, themeInitialState, ActionType} from '../reducers/themeReducer';
 
-type ThemeType = {
-    theme: 'Dark' | 'Light';
+// type ThemeType = {
+//     theme: 'Dark' | 'Light';
+// }
+
+const userInitialState = 'Lucas';
+// const themeInitialState: ThemeType = {
+//     status: 'dark'
+// } 
+
+type ContextType = {
+    user: string,
+    state: ThemeType,
+    dispatch: React.Dispatch<any>
 }
-
-const userInitialState: string = 'Lucas';
-const themeInitialState: ThemeType = {
-    theme: 'Dark'
-} 
-
-
-export const Context = createContext({
+export const Context = createContext<ContextType>({
     user: userInitialState,
-    theme: themeInitialState
+    state: themeInitialState,
+    dispatch: () => null
 });
 
 export const ContextProvider = ({children}: React.PropsWithChildren) => {
     const user = userInitialState;
-    const theme = themeInitialState;
-
+    const [state, dispatch] = useReducer(themeReducer, themeInitialState)
     return (
-        <Context.Provider value={{user, theme}}>
+        <Context.Provider value={{ state, dispatch, user}}>
             {children}
         </Context.Provider>
     )

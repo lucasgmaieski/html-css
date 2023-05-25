@@ -5,16 +5,17 @@ import { MainRoutes } from "./routes/MainRoutes"
 
 
 function App() {
-  const {user, theme} = useContext(Context)
+  const {state, dispatch, user} = useContext(Context)
   return (
-    <ContextProvider>
-      <h1>Galeria de Fotos do {user} (tema: {theme.theme}) </h1>
+    <>
+      <h1>Galeria de Fotos do {user} (tema: {state.status}) </h1>
+      <button>{state.status === 'dark'? 'Light' : 'Dark'}</button>
       <hr />
       <MainRoutes />
       <footer>
         Todos os direitos reservados.
       </footer>
-    </ContextProvider>
+    </>
   );
 }
 
