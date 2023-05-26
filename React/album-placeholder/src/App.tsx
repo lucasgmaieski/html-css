@@ -1,15 +1,33 @@
 import { useContext } from "react";
-import { Context, ContextProvider } from "./contexts/Context";
+import { Context } from "./contexts/Context";
 import { MainRoutes } from "./routes/MainRoutes"
 
 
 
 function App() {
-  const {state, dispatch, user} = useContext(Context)
+  const {state, dispatch, user} = useContext(Context);
+  const changeTheme = () => {
+    if(state.status === 'dark') {
+      dispatch({
+        type: 'CHANGE_STATUS',
+        payload: {
+          status: 'light'
+        }
+      });
+    } else if(state.status === 'light') {
+      dispatch({
+        type: 'CHANGE_STATUS',
+        payload: {
+          status: 'dark'
+        }
+      });
+    }
+    
+  }
   return (
     <>
       <h1>Galeria de Fotos do {user} (tema: {state.status}) </h1>
-      <button>{state.status === 'dark'? 'Light' : 'Dark'}</button>
+      <button onClick={changeTheme}>{state.status === 'dark'? 'Light' : 'Dark'}</button>
       <hr />
       <MainRoutes />
       <footer>
