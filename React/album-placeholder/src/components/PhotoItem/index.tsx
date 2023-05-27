@@ -10,7 +10,7 @@ export const PhotoItem = ({ data }: Props) => {
     const {state} = useContext(Context);
 
     return (
-        <StyledLink to={`/photo/${data.id}`} status={state}>
+        <StyledLink to={`/photo/${data.id}`} state={state}>
             <img src={data.thumbnailUrl} alt="foto" />
         </StyledLink>
     );

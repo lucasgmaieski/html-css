@@ -1,4 +1,3 @@
-import { useReducer } from 'react';
 
 export type ThemeType = {
     status: 'dark' | 'light'
@@ -21,4 +20,3 @@ export const themeReducer = (state: ThemeType, action: ActionType) => {
     }
     return state;
 }
-// export const [state, dispatch] = useReducer(themeReducer, themeInitialState);

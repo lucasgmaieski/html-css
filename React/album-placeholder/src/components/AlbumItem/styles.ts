@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ThemeType } from '../../reducers/themeReducer';
 
-
-export const StyledLink = styled(Link)`
-    border: 2px solid ${state.status === 'dark' ? '#000' : '#fff'};
+type MainProps = {
+    state: ThemeType
+}
+export const StyledLink = styled(Link)<MainProps>`
+    border: 2px solid ${props => props.state.status === 'dark' ? '#fff' : '#000'};
     padding: 20px;
     margin: 10px;
     cursor: pointer;
     display: block;
     text-decoration: none;
-    color: ${state.status === 'dark' ? '#fff' : '#000'};
+    color: ${props => props.state.status === 'dark' ? '#fff' : '#000'};
     &:hover {
-        background-color: #eee;
+        background-color: ${props => props.state.status === 'dark' ? '#fff5' : '#000'};
     }
 `;

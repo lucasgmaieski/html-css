@@ -1,14 +1,7 @@
 import React, { createContext, useReducer } from "react";
-import { themeReducer, ThemeType, themeInitialState, ActionType} from '../reducers/themeReducer';
-
-// type ThemeType = {
-//     theme: 'Dark' | 'Light';
-// }
+import { themeReducer, ThemeType, themeInitialState} from '../reducers/themeReducer';
 
 const userInitialState = 'Lucas';
-// const themeInitialState: ThemeType = {
-//     status: 'dark'
-// } 
 
 type ContextType = {
     user: string,

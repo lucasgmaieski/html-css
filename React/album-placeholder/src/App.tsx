@@ -25,7 +25,7 @@ function App() {
     
   }
   return (
-    <>
+    <div style={{backgroundColor: state.status === 'dark' ? '#000' : '#fff', color: state.status === 'dark' ? '#fff' : '#000', width: '98.6vw' }}>
       <h1>Galeria de Fotos do {user} (tema: {state.status}) </h1>
       <button onClick={changeTheme}>{state.status === 'dark'? 'Light' : 'Dark'}</button>
       <hr />
@@ -33,7 +33,7 @@ function App() {
       <footer>
         Todos os direitos reservados.
       </footer>
-    </>
+    </div>
   );
 }
 
