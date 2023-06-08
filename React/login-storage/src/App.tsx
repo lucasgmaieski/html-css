@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { AuthProvider } from './context/AuthProvider'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ProtectedLayout } from './components/ProtectedLayout'
+import { Login } from './components/Login'
 function App() {
     const [count, setCount] = useState(0)
 
@@ -8,7 +10,12 @@ function App() {
         <AuthProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/tela" element={<ProtectedLayout><tela/></ProtectedLayout>}></Route>
+                <Route path="/profile" element={<ProtectedLayout><h2>Olá você esta na página profile</h2></ProtectedLayout>}></Route>
+
+                </Routes>
+
+                <Routes>
+                    <Route path="/login" element={<Login />}></Route>
                 </Routes>
             </BrowserRouter>
         </AuthProvider>

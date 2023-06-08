@@ -19,9 +19,9 @@ export function getUserLocalStorage () {
 }
 
 // LocalStorage é como se fosse um banco de dados do Browser
-export async function LoginRequest (email: string, passowrd: string) {
+export async function LoginRequest (email: string, password: string) {
     try {
-        const request = await Api.post('login', {email, passowrd});
+        const request = await Api.post("login", {email, password});
 
         return request.data;
     } catch (error) {
