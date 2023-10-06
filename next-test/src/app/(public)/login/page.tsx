@@ -1,10 +1,15 @@
+'use client'
+
 import { useRouter } from "next/navigation"
 
 export default function LoginPage(){
-    const router = useRouter
+    const router = useRouter();
     return (
-        <form>
-                <h1>Página de usuários</h1>
+        <form onSubmit={(e) => {
+            router.push('/');
+            e.preventDefault();
+        }}>
+            <h1>Página de usuários</h1>
             <div>
                 <label htmlFor="">Email:</label>
                 <input type="email" name="email" id="email" />
