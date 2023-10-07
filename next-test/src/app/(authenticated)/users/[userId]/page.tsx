@@ -1,5 +1,6 @@
 import { getUserById } from "@/app/(public)/login/services/get-user-by-id"
 import { Metadata } from "next";
+import OtherUsers from "./components/other-users";
 
 type Props = {
     params: {
@@ -21,5 +22,8 @@ export default async function UserDetailsPage({params}: {params: {userId: string
     return <>
         <h2>Usuário: {user.first_name} {user.last_ame}</h2>
         <span>{user.email}</span>
+        <hr className="h-[2px] bg-slate-400"/>
+        <h2>Outros Usuários</h2>
+        <OtherUsers currentUserId={params.userId}></OtherUsers>
     </>
 }

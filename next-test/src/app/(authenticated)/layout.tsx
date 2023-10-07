@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={`${inter.className} h-screen`}>
             <h1>Sistema: Olá Mundo!</h1>
             <nav>
                 <ul className='flex gap-2'>
@@ -37,7 +37,7 @@ export default function RootLayout({
                     <li><Link href="/login">Login</Link></li>
                 </ul>
             </nav>
-            <hr />
+            <hr className='h-[2px] bg-slate-400'/>
 
             
             {children}</body>
