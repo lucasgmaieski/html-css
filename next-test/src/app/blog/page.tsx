@@ -1,16 +1,32 @@
+import { Post } from "@/types/Post";
 import Link from "next/link";
 
-export default function Blog() {
+type Props = {
+    name: string;
+    posts: Post[];
+}
+
+export const getData = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts', { next: { revalidate: 3600 } });
+    const posts: Post[] = await res.json();
+
+    return {
+        props: {
+            name: 'Lucas',
+            posts
+        }
+    }
+}
+
+export default async function Blog() {
+    const propsBlog = await getData();
     return (
         <main>
-            <h1>Lista de posts</h1>
+            <h1>Lista de posts do {propsBlog.props.name}</h1>
             <ul className="flex flex-col gap-3">
-                <li className="border border-green-700"><Link href="blog/post1">Post lorem ipson 1</Link></li>
-                <li className="border border-green-700"><Link href="blog/post2">Post lorem ipson 2</Link></li>
-                <li className="border border-green-700"><Link href="blog/post3">Post lorem ipson 3</Link></li>
-                <li className="border border-green-700"><Link href="blog/post4">Post lorem ipson 4</Link></li>
-                <li className="border border-green-700"><Link href="blog/post5">Post lorem ipson 5</Link></li>
-                <li className="border border-green-700"><Link href="blog/post6">Post lorem ipson 6</Link></li>
+                {propsBlog.props.posts.map((post, index)=>(
+                    <li key={index} className="border border-green-700"><Link href={`blog/${post.id}`}>{post.title}</Link></li>
+                ))}
             </ul>
         </main>
     )
