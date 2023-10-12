@@ -1,6 +1,7 @@
 import { getUserById } from "@/app/(public)/login/services/get-user-by-id"
 import { Metadata } from "next";
 import OtherUsers from "./components/other-users";
+import { getUsers } from "@/app/(public)/login/services/get-users";
 
 type Props = {
     params: {
@@ -14,6 +15,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
         title: `${user.first_name} - Usuários - Sistema Olá Mundo`,
         description: params.userId,
     }
+}
+
+export async function generateStaticParams() {
+    const users = await getUsers();
+    const usersIds = users.map((user: any)=> ({userId: user.id.toString()}));
+    return usersIds;
 }
 
 export default async function UserDetailsPage({params}: {params: {userId: string}}) {

@@ -1,5 +1,7 @@
 import { Post } from "@/types/Post";
 import { Metadata } from "next";
+import { getPosts } from "./services/get-posts";
+import { getPostById } from "./services/get-post-by-id";
 
 type Props = {
     params: {
@@ -8,21 +10,23 @@ type Props = {
 }
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
+    const post = await getPostById(params.postId);
+
     return {
-        title: `Post ${params.postId}`,
-        description: `Página do Post ${params.postId}`,
+        title: `${post.title}`,
+        description: `Descrição do Post ${post.title}`,
     }
 }
 
-export async function getPostData(id: string): Promise<Post> {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-    const post = await res.json();
-    return post;
-}
+// export async function getPostData(id: string): Promise<Post> {
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+//     const post = await res.json();
+//     return post;
+// }
 
 export default async function BlogPost({params}: Props) {
     // const {slug, postId } = params;
-    const post = await getPostData(params.postId);
+    const post = await getPostById(params.postId);
 
     return(
         <main>
@@ -33,9 +37,10 @@ export default async function BlogPost({params}: Props) {
 }
 
 export async function generateStaticParams() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const posts: Post[] = await res.json();
-    return posts.map((post) => ({
-      postId: post.id.toString(),
-    }))
-  }
+    const posts: Post[] = await getPosts();
+    const postsIds = posts.map((post) => ({
+        postId: post.id.toString()
+    }));
+
+    return postsIds;
+}
