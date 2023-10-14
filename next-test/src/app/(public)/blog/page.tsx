@@ -1,6 +1,5 @@
 import { Post } from "@/types/Post";
 import Link from "next/link";
-import { getPosts } from "./[postId]/services/get-posts";
 
 type Props = {
     name: string;
@@ -18,6 +17,12 @@ type Props = {
 //         }
 //     }
 // }
+async function getPosts() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'no-store' });
+    const posts = await response.json();
+
+    return posts || [];
+}
 
 export default async function Blog() {
     const postsBlog: Post[] = await getPosts();

@@ -34,7 +34,7 @@ export default function RootLayout({
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/blog">Blog</Link></li>
                     <li><Link href="/users">Usuários</Link></li>
-                    <li><Link href="/login">Login</Link></li>
+                    <li><Link href="/login" scroll={false}>Login</Link></li>
                 </ul>
             </nav>
             <hr className='h-[2px] bg-slate-400'/>
